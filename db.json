@@ -1,0 +1,25 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "text": "Cita con el médico",
+      "day": "5 Febrero, 10:00",
+      "place": "C/Arquitecte Bennàsar, 9",
+      "reminder": true
+    },
+    {
+      "id": 2,
+      "text": "Reunión escolar",
+      "day": "6 Febrero, 17:00",
+      "place": "C/Tomàs Lluis de Victòria, 9",
+      "reminder": false
+    },
+    {
+      "text": "Comprar",
+      "day": "5 oct, 12:00",
+      "place": "Mercadona",
+      "reminder": true,
+      "id": 3
+    }
+  ]
+}
