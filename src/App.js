@@ -24,7 +24,7 @@ const App = function () {
 
   // Fetch tasks
   const fetchTasks = async function () {
-    const res = await fetch('http://localhost:5000/tasks')
+    const res = await fetch('https://my-json-server.typicode.com/jperellolopez/json-server/tasks')
     const data = await res.json()
     return data
 
@@ -32,7 +32,7 @@ const App = function () {
 
   // Fetch single task
   const fetchTask = async function (id) {
-    const res = await fetch(`http://localhost:5000/tasks/${id}`)
+    const res = await fetch(`https://my-json-server.typicode.com/jperellolopez/json-server/tasks/${id}`)
     const data = await res.json()
     return data
 
@@ -42,7 +42,7 @@ const App = function () {
   const deleteTask = async function (id) {
 
     // Primero borra la tarea de la fuente de datos (json)
-    await fetch(`http://localhost:5000/tasks/${id}`, { method: 'DELETE' })
+    await fetch(`https://my-json-server.typicode.com/jperellolopez/json-server/tasks/${id}`, { method: 'DELETE' })
 
     // Después borra la tarea de la interfaz
     // para cada tarea, si el id es diferente del id que se le pasa (clickeado) se borra
@@ -56,7 +56,7 @@ const App = function () {
     const taskToToggle = await fetchTask(id)
     const updatedTask = {...taskToToggle, reminder: !taskToToggle.reminder}
 
-    const res = await fetch(`http://localhost:5000/tasks/${id}`, { method: 'PUT', headers: { 'Content-type': 'application/json' }, body: JSON.stringify(updatedTask)
+    const res = await fetch(`https://my-json-server.typicode.com/jperellolopez/json-server/tasks/{id}`, { method: 'PUT', headers: { 'Content-type': 'application/json' }, body: JSON.stringify(updatedTask)
   })
 
   const data = await res.json()
@@ -69,7 +69,7 @@ const App = function () {
   // Función para añadir una nueva tarea. 
   const addTask = async function (task) {
 
-    const res = await fetch(`http://localhost:5000/tasks`, {
+    const res = await fetch(`https://my-json-server.typicode.com/jperellolopez/json-server/tasks`, {
       method: 'POST', headers: { 'Content-type': 'application/json' }, body: JSON.stringify(task)
     })
 
